@@ -16,7 +16,7 @@ def runProgram():
     price_floor_float = float(price_floor)
     email_address = input("Enter an email address where notifications will be sent: ")
 
-    password = "pricealert123?"
+    password = "<the password to the email from which the message will be sent>"
     price = getPrice(url)
     if (price < price_floor_float):
         sendEmail(url, email_address, password)
