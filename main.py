@@ -54,14 +54,14 @@ def sendEmail(url, email, password):
     server.starttls()
     server.ehlo()
 
-    server.login("pricetrack94@gmail.com", password)
+    server.login("<email address from which the message will be sent>", password)
 
     subject = 'Amazon Item Price Floor Reached'
     body = 'Your Amazon item has dropped below the specified price. Link to Item: ' + url
 
     msg = f"Subject: {subject}\n\n{body}"
 
-    server.sendmail("pricetrack94@gmail.com", email, msg)
+    server.sendmail("<email address from which the message will be sent>", email, msg)
     print('Email Sent')
     server.quit()
 
